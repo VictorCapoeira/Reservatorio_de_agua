@@ -1,18 +1,35 @@
 ﻿using System.Threading.Tasks;
 bool bomba = false;
-bool boia1 = false;
-bool boai2 = false;
-bool boaiCaixa = false;
+int boia1, boia2 ,boaiCaixa;
 bool valvula = false;
 
-string exibir, exibir2;
-exibir = boai2 == false ? "Enchendo o reservatorio de água!" : "O reservatorio de água está cheio!";
-Console.WriteLine(exibir);
+Console.WriteLine("Insira o estado da boia 1 (0 desligado ou 1 ligado)");
+boia1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Insira o estado da boia 2 (0 desligado ou 1 ligado)");
+boia2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Insira o estado da boia da caixa (0 desligado ou 1 ligado)");
+boaiCaixa = int.Parse(Console.ReadLine());
 
-bomba = boia1 && boaiCaixa == false ? true : false;
+if((boia1 == 0 && boia2 == 0) || (boia1 == 1 && boia2 == 0)){
+    valvula = true;
+    Console.WriteLine("Enchendo o reservatorio!");
+}else if(boia1 == 1 && boia2 == 1){
+    Console.WriteLine("Reservatorio cheio!");
+}
+else if(boia1 == 0 && boia2 == 1){
+    Console.WriteLine("Existe um problema nas boias");
+}
 
-exibir2 =  bomba ? "Enchendo a caixa de água" : "A caixa de água está cheia";
-Console.WriteLine(exibir2);
+if((boia1 == 1 && boaiCaixa == 0)){
+    bomba = true;
+    Console.WriteLine("Enchendo a caixa!");
+}else if(boaiCaixa == 1){
+    Console.WriteLine("Caixa cheia!");
+}else{
+    Console.WriteLine("Caixa vazia");
+}
+
+
 
 
 
