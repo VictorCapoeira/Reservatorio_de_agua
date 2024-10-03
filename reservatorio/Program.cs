@@ -9,8 +9,12 @@ string exibir, exibir2;
 exibir = boai2 == false ? "Enchendo o reservatorio de água!" : "O reservatorio de água está cheio!";
 Console.WriteLine(exibir);
 
-exibir2 = boia1 && boaiCaixa == false ? "Enchendo a caixa de água" : "A caixa de água está cheia";
+bomba = boia1 && boaiCaixa == false ? true : false;
+
+exibir2 =  bomba ? "Enchendo a caixa de água" : "A caixa de água está cheia";
 Console.WriteLine(exibir2);
+
+
 
 
 
