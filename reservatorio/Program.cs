@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-bool bomba = false;
+﻿bool bomba = false;
 int boia1, boia2 ,boaiCaixa;
 bool valvula = false;
 
@@ -28,11 +27,3 @@ if((boia1 == 1 && boaiCaixa == 0)){
 }else{
     Console.WriteLine("Caixa vazia");
 }
-
-
-
-
-
-
-
-
